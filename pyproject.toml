@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "zak-nlptk"
+version = "0.1.0"
+
+description = "A lightweight Python NLP toolkit for text normalization, segmentation, lemmatization, BPE tokenization, and token encoding."
+
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Ihimbru Zadolf Ongum" }
+]
+
+keywords = [
+    "nlp",
+    "natural-language-processing",
+    "tokenization",
+    "bpe",
+    "byte-pair-encoding",
+    "lemmatization",
+    "text-normalization",
+    "text-segmentation",
+    "machine-learning"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0"
+]
+
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.setuptools.package-data]
+zak_nlptk = [
+    "data/*.txt",
+    "data/*.json"
+]

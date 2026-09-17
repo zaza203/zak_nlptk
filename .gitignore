@@ -1,0 +1,17 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Pytest
+.pytest_cache/
+
+# Packaging metadata
+*.egg-info/
+
+# Local/test files
+bpe_model.json
+testing.py
