@@ -13,10 +13,12 @@ understanding and implementing core NLP components from first principles.
 - Token-to-ID encoding
 - ID-to-token decoding
 - A simple end-to-end NLP pipeline
+- TF-IDF feature extraction
+- Naive Bayes text classification
 - A built-in Moby Dick corpus for experimentation
 
-The project is intentionally lightweight and currently relies only on
-the Python standard library.
+The project is intentionally lightweight and uses a small number of
+external dependencies for numerical and data-processing operations.
 
 ---
 
@@ -546,6 +548,26 @@ BPE tokenization
 Token IDs
 ```
 
+# TF-IDF
+
+`zak-nlptk` provides a lightweight TF-IDF implementation for converting
+documents into numerical feature representations.
+
+```python
+from zak_nlptk import TfIdF
+
+documents = [
+    "free money now",
+    "meeting tomorrow",
+    "free prize available"
+]
+
+tfidf = TfIdF()
+
+X = tfidf.fit_transform(documents)
+
+print(X)
+
 ---
 
 # Architecture
@@ -599,6 +621,8 @@ zak-nlptk/
 │       ├── bpe.py
 │       ├── codec.py
 │       ├── pipeline.py
+│       ├── tf_idf.py
+│       ├── naive_bayes.py
 │       │
 │       └── data/
 │           ├── _whale.txt
@@ -653,6 +677,16 @@ Provides lightweight rule-based linguistic analysis.
 Connects normalization, BPE tokenization, and encoding into a simpler
 high-level interface.
 
+### TfIdF
+
+Provides TF-IDF feature extraction for converting text documents into
+numerical feature representations.
+
+### NaiveBayes
+
+Provides lightweight count-based and TF-IDF-based Naive Bayes
+classification.
+
 ---
 
 # Current Scope
@@ -668,6 +702,9 @@ The project currently focuses on:
 - basic text normalization
 - basic segmentation
 - lightweight rule-based lemmatization
+- TF-IDF feature extraction
+- classical machine-learning classification
+- Naive Bayes text classification
 
 The project does not currently attempt to provide:
 

@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zak-nlptk"
-version = "0.1.0"
+version = "0.2.0"
 
-description = "A lightweight Python NLP toolkit for text normalization, segmentation, lemmatization, BPE tokenization, and token encoding."
+description = "A lightweight Python NLP toolkit for pretraining (text normalization, text segmentation, and bpe tokenization), tf-idf feature extraction, and text classification (naive bayes)."
 
 readme = "README.md"
 
@@ -28,7 +28,10 @@ keywords = [
     "lemmatization",
     "text-normalization",
     "text-segmentation",
-    "machine-learning"
+    "machine-learning",
+    "term frequency inverse document frequency",
+    "tf-idf",
+    "naive bayes classifier"
 ]
 
 classifiers = [
@@ -49,7 +52,10 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence"
 ]
 
-dependencies = []
+dependencies = [
+    "numpy",
+    "pandas"
+]
 
 [project.optional-dependencies]
 dev = [

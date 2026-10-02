@@ -15,3 +15,6 @@ __pycache__/
 # Local/test files
 bpe_model.json
 testing.py
+spam.ipynb
+spam_naive_bayes.pkl
+nothing.py
